@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulare AI-Lösungen</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background: #0f172a; color: white; }
+        header {
+            background: url('https://source.unsplash.com/1600x900/?network,technology') center/cover no-repeat;
+            padding: 100px 20px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        h1 { font-size: 48px; }
+        .hero-text { font-size: 28px; margin-top: 10px; }
+        section { padding: 80px 20px; max-width: 900px; margin: auto; border-radius: 10px; background: #1e293b; }
+        .cta { background: #3b82f6; color: white; padding: 15px 25px; display: inline-block; text-decoration: none; margin-top: 20px; border-radius: 5px; transition: background 0.3s ease-in-out; }
+        .cta:hover { background: #1e3a8a; }
+        .interactive { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .interactive div { background: #334155; padding: 30px; border-radius: 10px; width: 250px; transition: transform 0.3s ease-in-out; cursor: pointer; }
+        .interactive div:hover { transform: translateY(-10px); }
+        .modal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; color: black; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0,0,0,0.1); }
+        .modal.show { display: block; }
+        .close { cursor: pointer; color: red; font-size: 20px; float: right; }
+    </style>
+    <script>
+        function openModal(content) {
+            document.getElementById('modal-content').innerHTML = content;
+            document.getElementById('modal').classList.add('show');
+        }
+        function closeModal() {
+            document.getElementById('modal').classList.remove('show');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>🚀 Modulare AI-Lösungen für datengetriebene Unternehmen</h1>
+        <p class="hero-text">Skalierbar. Effizient. Maßgeschneidert.</p>
+    </header>
+
+    <section class="fade-in section-1">
+        <h2>Über uns</h2>
+        <p>Wir sind ein innovatives Unternehmen, das sich auf die Entwicklung modularer, skalierbarer AI-Lösungen spezialisiert hat. Unser Fokus liegt auf der Optimierung datengetriebener Prozesse, um Unternehmen effizienter und wettbewerbsfähiger zu machen.</p>
+    </section>
+
+    <section class="fade-in section-2">
+        <h2>Effiziente AI-Lösungen für datengetriebene Unternehmen</h2>
+        <p>Unsere AI-gestützten Lösungen helfen Unternehmen dabei, ihre Daten optimal zu nutzen. Mit modularen Chatbots automatisieren wir Prozesse, reduzieren manuelle Arbeit und ermöglichen datenbasierte Entscheidungen in Echtzeit.</p>
+        <a href="#use-cases" class="cta">Lernen Sie mehr über unsere Lösungen</a>
+    </section>
+
+    <section id="use-cases" class="fade-in section-3">
+        <h2>Unsere Lösung</h2>
+        <div class="interactive">
+            <div onclick="openModal('Business Intelligence Chatbot hilft Unternehmen, Daten in Echtzeit zu analysieren und fundierte Entscheidungen zu treffen.')">📊 Business Intelligence Chatbot</div>
+            <div onclick="openModal('Marktforschung & Wettbewerbsanalysen nutzen AI, um Trends und Wettbewerbsdaten automatisch zu erfassen.')">🌍 Marktforschung & Wettbewerbsanalysen</div>
+            <div onclick="openModal('Lieferanten-Scouting & Risikomanagement ermöglichen eine effiziente Bewertung und Auswahl neuer Lieferanten.')">🏭 Lieferanten-Scouting & Risikomanagement</div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in section-4">
+        <h2>Kontakt & Next Steps</h2>
+        <p>Interessiert an AI-Lösungen für Ihr Unternehmen? Wir beraten Sie gerne individuell und zeigen Ihnen, wie unsere Technologie Ihnen helfen kann.</p>
+        <a href="mailto:clara@thuemecke.net" class="cta">Jetzt Kontakt aufnehmen</a>
+    </section>
+
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p id="modal-content"></p>
+    </div>
+</body>
+</html>
